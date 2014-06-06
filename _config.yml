@@ -1,0 +1,17 @@
+# GitHub pages defaults
+pygments: true
+safe:     true
+lsi:      false
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+defaults:
+  - scope:
+      path: "" # all files
+    values:
+      layout: default
+
+permalinks: pretty
