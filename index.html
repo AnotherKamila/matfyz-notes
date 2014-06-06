@@ -20,10 +20,5 @@ layout: chrome
 {% endfor %}
 </ul>
 
-recent:
-{% for post in site.posts offset: 0 limit: 10 %}
-    {{ post.title }}
-{% endfor %}
-
-repository URL: {{ site.github.repository_url }}
-last updated: {{ site.time | date_to_long_string }}
+<p>repository URL: {{ site.github.repository_url }}</p>
+<p>last updated: {{ site.time | date_to_long_string }}</p>
