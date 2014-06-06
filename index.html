@@ -9,14 +9,14 @@ layout: chrome
 <p>subjects:</p>
 <ul>
 {% for subject in site.categories %}
-    <li><a href="/{{ subject[0] }}">{{ subject[0] }}</a></li>
+    <li><a href="{{ site.github.url }}/{{ subject[0] }}">{{ subject[0] }}</a></li>
 {% endfor %}
 </ul>
 
 <p>recent:</p>
 <ul>
 {% for note in site.posts offset: 0 limit: 10 %}
-    <li><a href="{{ note.url }}">{{ note.title }} ({{ note.date | date_to_string }})</a></li>
+    <li><a href="{{ site.github.url }}/{{ note.url }}">{{ note.title }} ({{ note.date | date_to_string }})</a></li>
 {% endfor %}
 </ul>
 
