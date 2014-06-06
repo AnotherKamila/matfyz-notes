@@ -9,6 +9,6 @@ Note: so far all notes are in Slovak only.
 
 ---------------------------------------------
 
-Poznámky z rôznych predmetov na FMFI ("Matfyze") – odbor informatika. Skompilované to visí na http://anotherkamila.github.io/matfyz-notes.
+Poznámky z rôznych predmetov na FMFI ("Matfyze") – odbor informatika. Skompilované to visí na http://anotherkamila.github.io/matfyz-notes. Pomoc je veľmi vítaná!
 
 **Licencia**: <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0</a>
