@@ -1,0 +1,29 @@
+---
+title:  Home
+author: Kamila Součková <kamila@vesmir.sk>
+layout: chrome
+---
+
+<p>testing stuff here</p>
+
+<p>subjects:</p>
+<ul>
+{% for subject in site.categories %}
+    <li><a href="/{{ subject[0] }}">{{ subject[0] }}</a></li>
+{% endfor %}
+</ul>
+
+<p>recent:</p>
+<ul>
+{% for note in site.posts offset: 0 limit: 10 %}
+    <li><a href="{{ note.url }}">{{ note.title }} ({{ note.date | date_to_string }})</a></li>
+{% endfor %}
+</ul>
+
+recent:
+{% for post in site.posts offset: 0 limit: 10 %}
+    {{ post.title }}
+{% endfor %}
+
+repository URL: {{ site.github.repository_url }}
+last updated: {{ site.time | date_to_long_string }}

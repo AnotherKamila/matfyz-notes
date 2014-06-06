@@ -7,7 +7,9 @@ markdown: kramdown
 kramdown:
   input: GFM
   auto_ids: true
+  transliterated_header_ids: true
 
+# these are actually not used yet, because GitHub haven't updated their Jekyll yet
 defaults:
   - scope:
       path: "" # all files
