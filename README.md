@@ -24,10 +24,13 @@ Ak chcem spoznámkovať napr. Taylorove polynómy na MA, spustím `./note.sh ma 
 
 ### Presnejšie:
 
+Napísať to lepšie je TODO. Nateraz stručne a nepresne:
+
 Zneužíva to [Jekyll](http://jekyllrb.com) (a hostované to je na [GitHub pages](https://pages.github.com/)), má to [MathJax](http://www.mathjax.org/) s mega configom a tak. To znamená:
-- súbory chcú byť nazvané `<predmet>/_posts/<stub>.<ext>`, kde `<stub>` je to, čo sa bude vyskytovať v URL (a teda to chce obsahovať len slušné znaky) a `<ext>` je nejaký podporovaný markup formát (defaultne [Markdown](http://daringfireball.net/projects/markdown/), môže byť aj [Textile](http://textile.sitemonks.com/))
+- súbory chcú byť nazvané `<predmet>/_posts/<stub>.<ext>`, kde `<stub>` je to, čo sa bude vyskytovať v URL (a teda to chce obsahovať len slušné znaky) a `<ext>` je nejaký podporovaný markup formát (defaultne [Markdown](http://daringfireball.net/projects/markdown/), môže byť aj [Textile](http://textile.sitemonks.com/)). Potrebujú mať YAML front matter. Používajte `./note.sh`.
+- na pridanie nového predmetu treba vyrobiť príslušný folder a `index.md` obsahujúci info v YAML front matter. Používajte `./addsubj.sh`.
 - píšete váš obľúbený markup formát (defaultne [Markdown](http://daringfireball.net/projects/markdown/)
-- matiku môžete písať v LaTeX-u (delimituje sa štandardne `$...$` a `$$...$$`, pričom `$$...$$` treba z nejakého dôvodu odsadiť (napr. 2 medzerami)), alebo (tramtadadááá) [AsciiMath](http://www.wjagray.co.uk/maths/ASCIIMathTutorial.html) (delimituje sa `%%...%%`)
-- bonus feature (**not implemented yet -- TODO**): keď sa odsek začína `DEF:`, tak sa tomu prihodí class `def`, keď `VT:` tak `vt`, keď `D:`, tak `dokaz`, takže potom sú vo výsledku rozoznateľnejšie :)
+- matiku môžete písať v LaTeX-u (delimituje sa štandardne `$...$` a `$$...$$`, pričom `$$...$$` treba z nejakého dôvodu odsadiť (napr. 2 medzerami)), alebo (tramtadadááá) [AsciiMath](http://www.wjagray.co.uk/maths/ASCIIMathTutorial.html) (delimituje sa `%...%`)
+- bonus feature (**not implemented yet – TODO**): keď sa odsek začína `DEF:`, tak sa tomu prihodí class `def`, keď `VT:` tak `vt`, keď `D:`, tak `dokaz`, takže potom sú vo výsledku rozoznateľnejšie :)
 
 Pozrite si, ako to tam vyzerá (keď tam raz niečo bude :D) a pochopíte. Ak máte otázky, veselo ma otravujte.

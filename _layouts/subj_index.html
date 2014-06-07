@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<ul>
+    {% for note in site.categories[page.subj] %}
+        <li><a href="{{ site.github.url }}/{{ note.url }}">{{ note.title }} ({{ note.date | date_to_string }})</a></li>
+    {% endfor %}
+</ul>
