@@ -1,7 +1,7 @@
 ---
-title:  Home
-author: Kamila Součková <kamila@vesmir.sk>
-layout: chrome
+title:      Home
+layout:     chrome
+custom_css: home
 ---
 
 <p>testing stuff here</p>
@@ -29,7 +29,7 @@ layout: chrome
 
 <p>
 contributors:
-<ul class="contributors-list">
+<ul class="contributors">
     {% for user in site.github.contributors | sort: contributions %}
         <li>
             <a href="{{user.html_url}}" title="{{user.login}}'s GitHub page">

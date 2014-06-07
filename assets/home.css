@@ -1,0 +1,12 @@
+ul.contributors {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.contributors li {
+    display: block;
+    float: left;
+}
+ul.contributors a img {
+    border-radius: 5px;
+}

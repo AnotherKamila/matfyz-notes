@@ -1,0 +1,61 @@
+/* === basics ===================== */
+
+/* === typography ================= */
+
+/* --- design     ----------------- */
+
+body {
+	font:  100%/1.4 "Liberation Sans", sans-serif;
+	color: #123;
+}
+
+p {
+	margin: 0.6em 0;
+}
+
+ol {
+	padding-left: 1.6em;
+	margin: 0;
+	list-style-type: none;
+	counter-reset: ol-counter;
+}
+ol > li:before {
+	display: inline-block;
+	font-family: "Liberation Serif", serif;
+	font-style: italic;
+	width: 1.2em;
+	content: counter(ol-counter, lower-roman) ')';
+	counter-increment: ol-counter;
+}
+
+/* --- functional ----------------- */
+
+em { /* used for notes */
+	margin: 0 1em;
+	color: #678;
+}
+
+dl dt {
+  margin: .6em 0 0;
+  color: #08e;
+}
+dl dd {
+  margin: 0.2em 0 0.2em 1px;
+  padding-left: 0.5em;
+  border-left: 2px solid #08e;
+}
+dl.def dd { border-color: #380; }
+dl.def dt { color: #380; }
+
+p.proof:before {
+	display: inline-block;
+	content: 'D';
+	font-size: 0.8em;
+	font-weight: bold;
+	width: 1.3em;
+	height: 1.3em;
+	padding: 0.1em 0 0 0.1em;
+	text-align: center;
+	color: #fff;
+	background: #345;
+}
