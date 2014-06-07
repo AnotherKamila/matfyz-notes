@@ -10,7 +10,7 @@ layout: chrome
 <ul>
 {% for page in site.pages %}
     {% if page.subj %}
-        <li><a href="{{ site.github.url }}{{ page.subj }}">{{ page.title }}</a></li>
+        <li><a href="{{ site.github.url }}/{{ page.subj }}">{{ page.title }}</a></li>
     {% endif %}
 {% endfor %}
 </ul>
@@ -19,11 +19,25 @@ layout: chrome
 <ul>
 {% for note in site.posts limit: 10 %}
     <li>
-        <a href="{{ site.github.url }}{{ note.url }}">{{ note.title }}</a>
+        <a href="{{ site.github.url }}/{{ note.url }}">{{ note.title }}</a>
         ({{ note.date | date_to_string }})
     </li>
 {% endfor %}
 </ul>
 
 <p>repository URL: {{ site.github.repository_url }}</p>
+
+<p>
+contributors:
+<ul class="contributors-list">
+    {% for user in site.github.contributors | sort: contributions %}
+        <li>
+            <a href="{{user.html_url}}" title="{{user.login}}'s GitHub page">
+                <img src="{{user.avatar_url}}s=48" title="{{user.login}}" alt="{{user.login}}" />
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+</p>
+
 <p>last updated: {{ site.time | date_to_long_string }}</p>
