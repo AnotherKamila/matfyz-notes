@@ -7,6 +7,9 @@
 body {
 	font:  100%/1.4 "Liberation Sans", sans-serif;
 	color: #123;
+	width: 90%;
+	max-width: 80em;
+	margin: 0 auto;
 }
 
 p {
@@ -26,6 +29,42 @@ ol > li:before {
 	width: 1.2em;
 	content: counter(ol-counter, lower-roman) ')';
 	counter-increment: ol-counter;
+}
+
+#toc .lvl2 {
+	margin-left: 2em;
+}
+#toc .lvl3 {
+	margin-left: 4em;
+}
+
+#content h1 {
+	border-bottom: 2px solid #678;
+}
+
+#content h1 ,
+#content h2 ,
+#content h3 {
+	position: relative;
+}
+
+#content h1 > a ,
+#content h2 > a ,
+#content h3 > a {
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0.2em;
+	padding-right: 1.2em;
+	margin-left: -1.2em;
+	text-decoration: none;
+	font-size: 0.8em;
+	visibility: hidden;
+}
+#content h1:hover > a ,
+#content h2:hover > a ,
+#content h3:hover > a {
+	visibility: visible;
 }
 
 .footnotes {

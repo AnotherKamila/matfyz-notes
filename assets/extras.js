@@ -10,7 +10,7 @@
 		}
 	}
 
-	/* === table of contents ==================================================================== */
+	/* === table of contents, header links ====================================================== */
 	function generate_toc(target, max_level) {
 		var select = {}; // set of interesting tag names
 		for (var i = 1; i <= max_level; ++i) select['h'+i] = true;
@@ -18,10 +18,12 @@
 		toc = '';
 		each_el('*', function(el) {
 			if (el.nodeName.toLowerCase() in select) {
-				console.debug(el);
-				var a = el.textContent.link('#'+el.id);
-				a.className = 'lvl'+el.nodeName.charAt(1);
-				toc += '<li>'+a+'</li>';
+				// TOC
+				var lvl = el.nodeName.charAt(1);
+				toc += '<li class="lvl'+lvl+'">'+el.textContent.link('#'+el.id)+'</li>';
+
+				// header links
+				el.innerHTML += '☍'.link('#'+el.id);
 			}
 		}, target.parentNode);
 		target.innerHTML = '<ul>'+toc+'</ul>';
