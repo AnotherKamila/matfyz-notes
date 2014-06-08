@@ -55,11 +55,13 @@ Počítanie konfigurácií
 ======================
 
 základné enumeračné pravidlá
-: **pravidlo súčtu**: Nech %X_1%, %X_2%, %...%, %X_n% sú navzájom disjunktné konečné podmnožiny konečnej množiny %X%, pričom %X = X_1 uu X_2 uu ... uu X_n%. Potom % \|X\| = \|X_1\| + \|X_2\| + ... + \|X_n\| %.
+: **pravidlo súčtu**: Nech %X_1%, %X_2%, %...%, %X_n% sú navzájom disjunktné konečné podmnožiny konečnej množiny %X%, pričom %X = X_1 uu X_2 uu ... uu X_n%. Potom
+  % \|X\| = \|X_1\| + \|X_2\| + ... + \|X_n\| %.
 
   D: indukciou vzhľadom na %n% (báza je pre %n = 2%)
 
-: **pravidlo súčinu**: Nech %X_1%, %X_2%, %...%, %X_n% sú ľubovoľné konečné množiny. Potom %\|X_1 times X_2 times ... times X_n\| = \|X_1\| * \|X_2\| * ... * \|X_n\|%.
+: **pravidlo súčinu**: Nech %X_1%, %X_2%, %...%, %X_n% sú ľubovoľné konečné množiny. Potom
+  %\|X_1 times X_2 times ... times X_n\| = \|X_1\| * \|X_2\| * ... * \|X_n\|%.
 
   D: indukciou, v indukčnom kroku používame pravidlo súčtu
 
@@ -67,11 +69,10 @@ Variácie
 --------
 
 počet zobrazení medzi konečnými množinami
-: Ak %A% a %B% sú konečné množiny, pričom %\|A\| = n% a %\|B\| = m%, tak %\|B^A\| = \|B\|^\|A\| = m^n%.[^zobr_ozn]
+: Ak %A% a %B% sú konečné množiny, pričom %\|A\| = n% a %\|B\| = m%, tak počet prvkov množiny všetkých zobrazení z %A% do %B% %=: \|B^A\| = \|B\|^\|A\| = m^n%.
 
-  D: ako debil: indukciou vzhľadom na %n%, báza je %B^O/ = {O/}%; rozumne: zapíšme zobrazenie sekvenčne: prvky z %A% (je ich %n%) sa zobrazia na %(f(a_1), ..., f(a_n))% %=> \|B times B times ... times B\|% (%n%-krát), aplikujeme pravidlo súčinu
-
-[^zobr_ozn]: %B^A% označuje množinu všetkých zobrazení z %A% do %B%.
+  D: zapíšme zobrazenie sekvenčne: prvky z %A% (je ich %n%) sa zobrazia na %(f(a_1), ..., f(a_n))% %=> \|B times B times ... times B\|% (%n%-krát), aplikujeme pravidlo súčinu
+  (alebo ako debil: indukciou vzhľadom na %n%, báza je %B^O/ = {O/}%)
 
 DEF: variácie s opakovaním
 : pre %A = {1,2,...,n}% a %\|B\| = m% sa prvky množiny %B^A% nazývajú **variácie s opakovaním** %n%-tej triedy z %m% prvkov (množiny %B%) – zoradím %n% prvkov množiny %B%
@@ -80,7 +81,9 @@ počet podmnožín
 : Nech %A% je množina. Potom počet všetkých podmnožín množiny %A% je $\|\mathcal{P}(A)\| = 2^{\|A\|}$.
 
 počet injektívnych zobrazení
-: Nech %A% a %B% sú konečné množiny, pričom %\|A\| = n% a %\|B\| = m%. Potom počet všetkých injektívnych zobrazení z %A% do %B% je %m * (m-1) * ... * (m - n + 1) = prod_(i=0)^(n-1) (m-i)% (t.j. %n%-tý klesajúci faktoriál z %m% %=: m^(ul n)%).
+: Nech %A% a %B% sú konečné množiny, pričom %\|A\| = n% a %\|B\| = m%. Potom počet všetkých injektívnych zobrazení z %A% do %B% je
+  %m * (m-1) * ... * (m - n + 1) = prod_(i=0)^(n-1) (m-i)%
+  (t.j. %n%-tý klesajúci faktoriál z %m% %=: m^(ul n)%).
   
   D: indukciou vzhľadom na %n%, báza je %n = 0%.
 
