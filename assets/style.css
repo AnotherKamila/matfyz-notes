@@ -54,8 +54,13 @@ p.proof:before {
 	font-weight: bold;
 	width: 1.3em;
 	height: 1.3em;
-	padding: 0.1em 0 0 0.1em;
+	padding: 0.05em 0 0.05em 0.1em;
 	text-align: center;
 	color: #fff;
 	background: #345;
+}
+
+.todo {
+	color: red;
+	font-weight: bold;
 }

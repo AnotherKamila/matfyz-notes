@@ -1,14 +1,16 @@
 (function(){
 
+	content = document.getElementById('content');
+
 	function each_el(tagname, fn, root) {
-		if (root == null) root = document;
+		if (root == null) root = content;
 		var els = root.getElementsByTagName(tagname);
 		for (var i = 0; i < els.length; ++i) {
 			fn(els[i]);
 		}
 	}
 
-	/* === table of contents ================================================ */
+	/* === table of contents ==================================================================== */
 	function generate_toc(target, max_level) {
 		var select = {}; // set of interesting tag names
 		for (var i = 1; i <= max_level; ++i) select['h'+i] = true;
@@ -26,7 +28,7 @@
 	}
 	generate_toc(document.getElementById('toc'), 3);
 
-	/* === typography ======================================================= */
+	/* === keywords ============================================================================= */
 	function add_class_on_kw(tagname, kw, classname) {
 		each_el(tagname, function(el) {
 			if (el.textContent.indexOf(kw) == 0) {
@@ -39,4 +41,5 @@
 	add_class_on_kw('dt', 'DEF:', 'def');
 	add_class_on_kw('p', 'D:', 'proof');
 
+	content.innerHTML = content.innerHTML.replace('TODO', '<span class="todo">TODO</span>');
 })();
