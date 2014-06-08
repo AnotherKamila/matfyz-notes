@@ -47,6 +47,51 @@ Dirichletov princíp
 
   Sporom: Nech %S% je neprázdna, potom (@princíp dobrého usporiadania) %exists min_(s in S) =: n%, a injektívne zobrazenie %f: {a_1, a_2, ..., a_n} to {b_1, b_2, ..., b_m}%, kde %m < n%. Teda %f% je "najmenšie zobrazenie" (týchto vlastností) vzhľadom na počet prvkov vzoru.
 
-  (Iste %m > 1%, lebo a konštantné zobrazenia z viac ako 1 prvku veľmi nie sú injektívne.) Z injektívnosti %f%: každý z prvkov %f(a_1), ..., f(a_(n-1))% je rôzny od %f(a_n)%. Potom ale zobrazenie vynechávajúce tento prvok %f': A - {a_n} to B - {f(a_n)}%, %f'(a_i) = f(a_i)% je tiež injektívne a je "menšie" (vzhľadom na počet prvkov vzoru) ako %f%, čo je spor (%f% malo byť najmenšie).
+  (Iste %m > 1%, lebo konštantné zobrazenia z viac ako 1 prvku nezvyknú byť injektívne.) Z injektívnosti %f%: každý z obrazov prvkov %f(a_1), ..., f(a_(n-1))% je rôzny od %f(a_n)%. Potom ale zobrazenie vynechávajúce tento prvok %f': A - {a_n} to B - {f(a_n)}; a_i mapsto f(a_i)% je tiež injektívne a je "menšie" (vzhľadom na počet prvkov vzoru) ako %f%, čo je spor (%f% malo byť najmenšie).
 
 TODO silnejšia forma Dirichletovho princípu
+
+Počítanie konfigurácií
+======================
+
+základné enumeračné pravidlá
+: **pravidlo súčtu**: Nech %X_1%, %X_2%, %...%, %X_n% sú navzájom disjunktné konečné podmnožiny konečnej množiny %X%, pričom %X = X_1 uu X_2 uu ... uu X_n%. Potom % \|X\| = \|X_1\| + \|X_2\| + ... + \|X_n\| %.
+
+  D: indukciou vzhľadom na %n% (báza je pre %n = 2%)
+
+: **pravidlo súčinu**: Nech %X_1%, %X_2%, %...%, %X_n% sú ľubovoľné konečné množiny. Potom %\|X_1 times X_2 times ... times X_n\| = \|X_1\| * \|X_2\| * ... * \|X_n\|%.
+
+  D: indukciou, v indukčnom kroku používame pravidlo súčtu
+
+Variácie
+--------
+
+počet zobrazení medzi konečnými množinami
+: Ak %A% a %B% sú konečné množiny, pričom %\|A\| = n% a %\|B\| = m%, tak %\|B^A\| = \|B\|^\|A\| = m^n%.[^zobr_ozn]
+
+  D: ako debil: indukciou vzhľadom na %n%, báza je %B^O/ = {O/}%; rozumne: zapíšme zobrazenie sekvenčne: prvky z %A% (je ich %n%) sa zobrazia na %(f(a_1), ..., f(a_n))% %=> \|B times B times ... times B\|% (%n%-krát), aplikujeme pravidlo súčinu
+
+[^zobr_ozn]: %B^A% označuje množinu všetkých zobrazení z %A% do %B%.
+
+DEF: variácie s opakovaním
+: pre %A = {1,2,...,n}% a %\|B\| = m% sa prvky množiny %B^A% nazývajú **variácie s opakovaním** %n%-tej triedy z %m% prvkov (množiny %B%) – zoradím %n% prvkov množiny %B%
+
+počet podmnožín
+: Nech %A% je množina. Potom počet všetkých podmnožín množiny %A% je $\|\mathcal{P}(A)\| = 2^{\|A\|}$.
+
+počet injektívnych zobrazení
+: Nech %A% a %B% sú konečné množiny, pričom %\|A\| = n% a %\|B\| = m%. Potom počet všetkých injektívnych zobrazení z %A% do %B% je %m * (m-1) * ... * (m - n + 1) = prod_(i=0)^(n-1) (m-i)% (t.j. %n%-tý klesajúci faktoriál z %m% %=: m^(ul n)%).
+  
+  D: indukciou vzhľadom na %n%, báza je %n = 0%.
+
+Poznámka: Dirichletov princíp je špeciálny prípad / dôsledok tohto: ak %n > m%, tak existuje %0% injekcií z %A% do %B%.
+
+DEF: variácie (bez opakovania)
+: injekcie z množiny %A = {1,2,...,n}% do množiny %B%, kde %\|B\| = m%, sa nazývajú **variácie (bez opakovania)** %n%-tej triedy z %m% prvkov (množiny %B%).
+
+DEF: permutácie
+: variácie %n%-tej triedy z %n% prvkov
+
+  poznámka: sú to bijekcie; (vzájomne jednoznačne) korešpondujú s lineárnymi usporiadaniami (%=>% počet lineárnych usporiadaní %n%-prvkovej množiny je %n!%)
+
+TODO zovšeobecnené pravidlo súčinu
