@@ -16,4 +16,6 @@ defaults:
     values:
       layout: default
 
+timezone: Europe/Bratislava
+
 permalink: pretty
