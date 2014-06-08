@@ -28,6 +28,17 @@ ol > li:before {
 	counter-increment: ol-counter;
 }
 
+.footnotes {
+	margin-top: 2em;
+	border-top: 1px solid #678;
+}
+.footnotes ol {
+	list-style-type: decimal;
+}
+.footnotes ol > li:before {
+	content: none;
+}
+
 /* --- functional ----------------- */
 
 em { /* used for notes */
@@ -44,8 +55,8 @@ dl dd {
   padding-left: 0.5em;
   border-left: 2px solid #08e;
 }
-dl.def dd { border-color: #380; }
-dl.def dt { color: #380; }
+dl dd.def { border-color: #380; }
+dl dt.def { color: #380; }
 
 p.proof:before {
 	display: inline-block;

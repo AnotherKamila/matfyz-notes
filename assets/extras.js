@@ -29,17 +29,20 @@
 	generate_toc(document.getElementById('toc'), 3);
 
 	/* === keywords ============================================================================= */
-	function add_class_on_kw(tagname, kw, classname) {
+	function each_el_on_kw(tagname, kw, fn) {
 		each_el(tagname, function(el) {
 			if (el.textContent.indexOf(kw) == 0) {
 				el.textContent = el.textContent.replace(kw, '');
-				el.classList.add(classname);
+				fn(el);
 			}
 		})
 	}
 
-	add_class_on_kw('dt', 'DEF:', 'def');
-	add_class_on_kw('p', 'D:', 'proof');
+	each_el_on_kw('p', 'D:', function(el) { el.classList.add('proof') });
+	each_el_on_kw('dt', 'DEF:', function(el) {
+		el.classList.add('def');
+		el.nextElementSibling.classList.add('def');
+	});
 
 	content.innerHTML = content.innerHTML.replace('TODO', '<span class="todo">TODO</span>');
 })();
