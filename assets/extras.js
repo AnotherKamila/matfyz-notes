@@ -46,5 +46,5 @@
 		el.nextElementSibling.classList.add('def');
 	});
 
-	content.innerHTML = content.innerHTML.replace('TODO', '<span class="todo">TODO</span>');
+	content.innerHTML = content.innerHTML.split('TODO').join('<span class="todo">TODO</span>');
 })();

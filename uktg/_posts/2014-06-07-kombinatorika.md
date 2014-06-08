@@ -97,4 +97,12 @@ DEF: permutácie
 
   poznámka: sú to bijekcie; (vzájomne jednoznačne) korešpondujú s lineárnymi usporiadaniami (%=>% počet lineárnych usporiadaní %n%-prvkovej množiny je %n!%)
 
-TODO zovšeobecnené pravidlo súčinu
+zovšeobecnené pravidlo súčinu
+: TODO
+
+Kombinácie bez opakovania
+-------------------------
+
+DEF: kombinácie bez opakovania
+: podmnožiny nejakej množiny
+  kombinácie (bez opakovania) %k%-tej triedy z %n% prvkov množiny %A% sú %k%-prvkové podmnožiny množiny %A% s mohutnosťou %\|A\| = n%.
