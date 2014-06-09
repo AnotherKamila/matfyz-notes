@@ -158,3 +158,28 @@ porovnanie nasledujúcich kombinačných čísel
   2. ak %n% je nepárne: %((n),(0)) < ((n),(1)) < ... < ((n),((n-1)//2)) = ((n),((n+1)//2)) > ... > ((n),(n))%
 
   D: cez pomer nasledujúcich
+
+
+Kombinácie s opakovaním, permutácie s opakovaním, polynomická veta
+------------------------------------------------------------------
+
+kombinácie s opakovaním
+: nerozlišuje sa poradie, prvky sa môžu opakovať
+
+veľké zlé TODO :D
+
+Princíp zapojenia a vypojenia
+-----------------------------
+
+idea: %\|A uu B\| = \|A\| + \|B\| - \|A nn B\|%; pre 3: %\|A uu B uu C\| = \|A\| + \|B\| + \|C\| - \|A nn B\| - \|A nn C\| - \|B nn C\| + \|A nn B nn C\| %; obdobne pre 4, ..., %n%, ...
+teda urveme to, čo sme započítali viackrát, pridáme to, čo sme odpočítali viackrát...
+
+princíp zapojenia a vypojenia
+: Nech %M_1, M_2, ..., M_n% sú konečné množiny. Položme pre %k in NN, 0 <= k <= n%:
+  % S_k = sum_(i_1 < ... < i_k) \| M_i_1 nn ... nn M_i_k \| %, sumujeme cez všetky kombinácie %{i_1, ... i_k}% z indexov %{1,...,n}%.
+  %S_0 = X :=% univerzálna množina – prienik ničoho (prázdnej množiny indexov)
+
+  Potom
+  % \|M_1 uu ... uu M_n \| = sum_(k=1)^n (-1)^(k+1) S_k %
+
+  D: TODO
