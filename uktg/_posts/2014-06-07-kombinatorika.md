@@ -121,3 +121,40 @@ hodnota %((n),(k))%
 : %((n),(k)) = (n(n-1)...(n-k+1))/(k!)= (n^(ul k))/k!%
 
   D: TODO
+
+### Vlastnosti kombinačných čísel
+
+súčet dvoch po sebe
+: pre ľubovoľné %n, k in NN% platí
+  % ((n),(k)) + ((n),(k+1)) = ((n+1),(k+1)) %
+
+  D: TODO
+
+  %=>% Pascalov trojuholník =)
+
+binomická veta
+: %forall x in RR, n in NN:%
+  % (1+x)^n = sum_(k=0)^n ((n),(k)) x^k %
+
+  D: indukciou vzhľadom na %n%, báza je %n = 0%
+
+identity (pre %n >= 1%)
+: %sum_(k=0)^n ((n),(k)) = 2^n%
+: %sum_(k=0)^n (-1)^k ((n),(k)) = 0%
+: % sum\_(0 <= k <= n, k text( párne)) ((n),(k)) = sum\_(0 <= k <= n, k text( nepárne)) ((n),(k)) = 2^(n-1) %
+
+: D: prvé dve z binomickej vety: položíme %x = 1%, resp. %-1%; tretiu sčítaním a odčítaním prvých dvoch a podelením 2; prvú ešte aj $\|\mathcal{P}(A)\| = \sum_{k = 0}^{n} \|\mathcal{P}_k(A)\|$
+
+Cauchyho sčítací vzorec
+: %forall m, n in NN:%
+  % sum_(i = 0)^n ((m),(i))((n),(k-i)) = ((m+n),(k)) %
+
+  D: TODO (dá sa nejaká hlboká kombinatorická úvaha, alebo z binomickej vety)
+
+porovnanie nasledujúcich kombinačných čísel
+: %forall n in NN:%
+  
+  1. ak %n% je párne: %((n),(0)) < ((n),(1)) < ... < ((n),(n//2 - 1)) < ((n),(n//2)) > ((n),(n//2 + 1)) > ... > ((n),(n))% 
+  2. ak %n% je nepárne: %((n),(0)) < ((n),(1)) < ... < ((n),((n-1)//2)) = ((n),((n+1)//2)) > ... > ((n),(n))%
+
+  D: cez pomer nasledujúcich
