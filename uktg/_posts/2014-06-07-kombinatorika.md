@@ -106,3 +106,18 @@ Kombinácie bez opakovania
 DEF: kombinácie bez opakovania
 : podmnožiny nejakej množiny
   kombinácie (bez opakovania) %k%-tej triedy z %n% prvkov množiny %A% sú %k%-prvkové podmnožiny množiny %A% s mohutnosťou %\|A\| = n%.
+
+  Ozn.: $\mathcal{P}_k(A)$ alebo %((A),(k))%; počet %((n),(k))% – **kombinačné číslo** (alebo **binomický koeficient**)
+
+Z definície:
+
+- %forall n >= 0: ((n),(0)) = 1% – práve jedna prázdna podmnožina
+- %forall n >= 0: ((n),(n)) = 1% – práve jedna %n%-prvková podmnožina – samotná množina
+- %forall n >= 0: ((n),(1)) = n% – jednoprvkové množiny sú prvky v množinových zátvorkách
+- %forall k <= n: ((n),(k)) = ((n),(n-k))% – %exists% bijekcia: zobrazenie %((A),(k)) to ((A),(n-k)), x mapsto A-x%
+- %forall k > n:  ((n),(k)) = 0% – neexistujú podmnožiny s viac ako %n% prvkami
+
+hodnota %((n),(k))%
+: %((n),(k)) = (n(n-1)...(n-k+1))/(k!)= (n^(ul k))/k!%
+
+  D: TODO
